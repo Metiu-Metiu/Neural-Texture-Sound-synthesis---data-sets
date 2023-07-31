@@ -6,7 +6,41 @@ Then, a Neural Network is trained on the supervised task of extracting the Synth
 Afterwards, Domain Adaptation is performed on the Network; since it is trained on the synthetic data distribution, the latent representation of the real sounds dataset is shifted to resemble as much as possible 
 the representation of the synthetic dataset. By doing so, we can extract Synthesis Control Parameters from un-labelled real sounds datasets.
 
-The synthetic datasets are created with Max 8 and the SDT_v2.2-078 (Sound Design Toolkit).
-The real sounds datasets are subset of the FSD50K dataset.
+The synthetic datasets are created using Max 8 and the SDT_v2.2-078 (Sound Design Toolkit, https://github.com/SkAT-VG/SDT) as Sound Engine. The probability distribution of each Synthesis Control Parameter is managed by the 'Creation_of_synthetic_Audio_datasets.py' file, and its relative JSON dictionary interface, in the SMC_Thesis repository (https://github.com/Metiu-Metiu/SMC_thesis). Please have a look at the documentation of that repository for specifics on the creation of the Synthetic Sounds Datasets.
+The real sounds datasets are subsets of the FSD50K dataset (https://zenodo.org/record/4060432, https://annotator.freesound.org/fsd/release/FSD50K/). Please refer to the script 'Creation_of_Audio_segmentedSubsets_of_datasets.py' in the SMC_thesis repository (https://github.com/Metiu-Metiu/SMC_thesis) for specifics on Real Sounds datasets creation.
 
-See 'SMC_Thesis' repo for more details.
+# Synthetic waterflow sounds datasets
+All synthetic waterflow sounds datasets have been synthesised controlling 4 Synthesis Control Parameters;
+- avgRate (float): Average n. of bubbles per second [0.0, 100000.0]
+- minRadius (float): Minimum bubble radius [0.15, 150.0]
+- maxRadius (float): Maximum bubble radius [0.15, 150.0]
+- expRadius (float): Bubble radius gamma factor [0.0, 10.0]
+
+Each dataset's folder contains a .csv file with the Synthesis Control Parameters' values used at the synthesis stage (usable as ground truth), and a .json file representing the JSON dictionary interface with the settings used by the user who created the dataset (e.g. number of sound files, ecc.)
+
+## SDT_FluidFlow_dataset_1000_1sec
+Synthetic waterflow sounds dataset created with the SDT_v2.2-078 (Sound Design Toolkit) Max 8 patch.
+There are 1,000 sounds samples, each of 1 second duration, 44.1 kHz sample rate.
+The Synthesis Control Parameters distribution is UNIFORM_CONTROLLABLE_VARIANCE_LINEARLY_SPACED_VALUES_UNIFORM_JOINT_DISTRIBUTION (see 'Creation_of_synthetic_Audio_datasets.py').
+
+## SDT_FluidFlow_dataset_1000_1sec_UNIFORM_LINEARLY_SPACED_VALUES
+Synthetic waterflow sounds dataset created with the SDT_v2.2-078 (Sound Design Toolkit) Max 8 patch.
+There are 1,000 sounds samples, each of 1 second duration, 44.1 kHz sample rate.
+The Synthesis Control Parameters distribution is UNIFORM_LINEARLY_SPACED_VALUES (see 'Creation_of_synthetic_Audio_datasets.py').
+
+## SDT_FluidFlow_dataset_10000_1sec
+Synthetic waterflow sounds dataset created with the SDT_v2.2-078 (Sound Design Toolkit) Max 8 patch.
+There are 10,000 sounds samples, each of 1 second duration, 44.1 kHz sample rate.
+The Synthesis Control Parameters distribution is UNIFORM_CONTROLLABLE_VARIANCE_LINEARLY_SPACED_VALUES_UNIFORM_JOINT_DISTRIBUTION (see 'Creation_of_synthetic_Audio_datasets.py').
+
+# Real waterflow sounds datasets
+The real waterflow sounds datasets are subsets of the FSD50K dataset.
+While creating the subset (script 'Creation_of_Audio_segmentedSubsets_of_datasets.py' in the SMC_thesis repository -https://github.com/Metiu-Metiu/SMC_thesis-), each file's tag in the canonical FSD50K dataset is compared against 2 list, specified in the 'Creation_of_Audio_segmentedSubsets_of_datasets.py' file. One list refers to the labels that need to be present in the subset, the oher list refers to the labels that are to be excluded from the created subset (the files labelled with those labels are not included in the subset).
+You can find these specifications in the '_creatorDescriptorDict.json' file, among the other settings used while creating the subsets.
+Each file in the subset is also further segmented in subsequent chunks of a pre-determined smaller duration.
+
+## FSD50K_Water_Stream_subset
+Subset of the FSD50K dataset containing waterflow sounds of 3 seconds duration each.
+
+## FSD50K_Water_Stream_subset_1sec
+Subset of the FSD50K dataset containing waterflow sounds of 1 second duration each.
