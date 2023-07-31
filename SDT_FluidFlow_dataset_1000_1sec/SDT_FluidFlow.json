@@ -1,0 +1,75 @@
+{
+    "Dataset_General_Settings": {
+        "absolute_Path": "/Users/matthew/Desktop/UPF/Courses/Master thesis project (Frederic Font)/Lonce Wyse - Data-Driven Neural Sound Synthesis/Software/datasets/SDT_FluidFlow_dataset_1000_1sec",
+        "audio_Files_Extension": ".wav",
+        "random_Seed": 0,
+        "distribution_Of_Values_For_Each_Synthesis_Control_Parameter": "UNIFORM_CONTROLLABLE_VARIANCE_LINEARLY_SPACED_VALUES_UNIFORM_JOINT_DISTRIBUTION",
+        "includeInCSVFile_ParametersValues_ScaledForMaxPDRanges": false,
+        "dateAndTime_WhenGenerationFinished_dd/mm/YY H:M:S": "10/06/2023 18:39:03",
+        "number_Of_AudioFiles_Generated": 1296,
+        "total_Dataset_Audio_Files_Duration_H:M:S": "0:21:36",
+        "time_Elapsed_During_Generation_H:M:S": "0:04:44"
+    },
+    "Audio_Files_Settings": {
+        "sample_Rate": 44100,
+        "file_Duration_Secs": 1.0,
+        "quantization_Bits": 16,
+        "file_Names_Prefix": "SDT_FluidFlow",
+        "volume": {
+            "normalizedRandomRange_Min": 0.5,
+            "normalizedRandomRange_Max": 0.75,
+            "chance_Generating_New_Volume": 100,
+            "chance_Retaining_Previous_File_Volume": 0,
+            "maxPDScaledRanges_Min": 0.0,
+            "maxPDScaledRanges_Max": 158.0
+        }
+    },
+    "Synthesis_Control_Parameters_Settings": {
+        "settings": {
+            "decimalPrecisionPoints": 3
+        },
+        "Synthesis_Control_Parameters": {
+            "avgRate": {
+                "normMinValue": 0.2,
+                "normMaxValue": 0.75,
+                "scaledMinValue": 0.0,
+                "scaledMaxValue": 100.0,
+                "chance_Generating_New_Value": 100,
+                "chance_Retaining_Previous_File_Value": 0,
+                "number_Of_Unique_SynthContrParam_Values": 6
+            },
+            "minRadius": {
+                "normMinValue": 0.1,
+                "normMaxValue": 0.5,
+                "scaledMinValue": 0.0,
+                "scaledMaxValue": 100.0,
+                "chance_Generating_New_Value": 50,
+                "chance_Retaining_Previous_File_Value": 50,
+                "number_Of_Unique_SynthContrParam_Values": 6
+            },
+            "maxRadius": {
+                "normMinValue": 0.5,
+                "normMaxValue": 0.8,
+                "scaledMinValue": 0.0,
+                "scaledMaxValue": 100.0,
+                "chance_Generating_New_Value": 50,
+                "chance_Retaining_Previous_File_Value": 50,
+                "number_Of_Unique_SynthContrParam_Values": 6
+            },
+            "expRadius": {
+                "normMinValue": 0.2,
+                "normMaxValue": 0.8,
+                "scaledMinValue": 0.0,
+                "scaledMaxValue": 100.0,
+                "chance_Generating_New_Value": 50,
+                "chance_Retaining_Previous_File_Value": 50,
+                "number_Of_Unique_SynthContrParam_Values": 6
+            }
+        }
+    },
+    "OSC_Communication_Settings": {
+        "oscComm_IPNumber": "127.0.0.1",
+        "oscComm_PyToMaxPD_PortNumber": 8000,
+        "oscComm_MaxPDToPy_PortNumber": 8001
+    }
+}
