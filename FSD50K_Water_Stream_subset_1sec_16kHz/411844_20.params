@@ -1,0 +1,61 @@
+{
+    "meta": {
+        "filename": "411844_20.wav"
+    },
+    "avgRate": {
+        "times": [
+            0,
+            1
+        ],
+        "values": [
+            "0.539828360080719",
+            "0.539828360080719"
+        ],
+        "units": "norm",
+        "nvals": 11,
+        "minval": 0,
+        "maxval": 1
+    },
+    "minRadius": {
+        "times": [
+            0,
+            1
+        ],
+        "values": [
+            "0.16994234919548035",
+            "0.16994234919548035"
+        ],
+        "units": "norm",
+        "nvals": 11,
+        "minval": 0,
+        "maxval": 1
+    },
+    "maxRadius": {
+        "times": [
+            0,
+            1
+        ],
+        "values": [
+            "0.513604998588562",
+            "0.513604998588562"
+        ],
+        "units": "norm",
+        "nvals": 11,
+        "minval": 0,
+        "maxval": 1
+    },
+    "expRadius": {
+        "times": [
+            0,
+            1
+        ],
+        "values": [
+            "0.4372389614582062",
+            "0.4372389614582062"
+        ],
+        "units": "norm",
+        "nvals": 11,
+        "minval": 0,
+        "maxval": 1
+    }
+}
