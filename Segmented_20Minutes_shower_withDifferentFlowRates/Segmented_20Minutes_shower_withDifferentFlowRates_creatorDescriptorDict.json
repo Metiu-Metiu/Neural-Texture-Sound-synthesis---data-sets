@@ -1,0 +1,37 @@
+{
+    "canonicalDatasetLoader_Settings": {
+        "datasetLoader_Library": "NONE",
+        "datasetLoader_Name": "fsd50k",
+        "canonicalDataset_LocationPath": "/Users/matthew/Downloads/Synthetic-and-real-sounds-datasets-for-SMC_Thesis/Unsegmented_20Minutes_shower_withDifferentFlowRates",
+        "download_CanonicalDataset": false,
+        "validate_CanonicalDataset": false,
+        "audio_Files_Format": ".wav"
+    },
+    "canonicalDatasetAugmentation_Settings": {
+        "segment_AudioClips": true,
+        "segments_Length_Secs": 1.0
+    },
+    "subset_Settings": {
+        "createSubset": false,
+        "tags_ToExtractFromCanonicalDataset": [
+            "Water",
+            "Stream"
+        ],
+        "tags_ToAvoidFromCanonicalDataset": [
+            "Rain",
+            "Gurgling",
+            "Steam",
+            "Ocean"
+        ],
+        "subsetTags_Policy": "Ignore_tags"
+    },
+    "outputDataset_Settings": {
+        "outputDataset_ParentFolder": "/Users/matthew/Downloads/Synthetic-and-real-sounds-datasets-for-SMC_Thesis",
+        "outputDataset_FolderName": "Segmented_20Minutes_shower_withDifferentFlowRates",
+        "outputDataset_DevSplit_SubFolderName": "",
+        "outputDataset_EvalSplit_SubFolderName": "",
+        "outputDataset_GroundTruthCsvFiles_SubFolderName": "",
+        "merge_DevAndEvalSplits_CsvFilesIntoOne": true
+    },
+    "outputDataset_Statistics": {}
+}
